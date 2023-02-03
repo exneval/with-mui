@@ -1,0 +1,26 @@
+{
+  "name": "kontenbase-fe",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "web:dev": "turbo run dev --filter=web",
+    "web:build": "turbo run build  --filter=web",
+    "web:start": "turbo run start --filter=web",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "prettier": "^2.8.3",
+    "turbo": "^1.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "pnpm@7.26.3"
+}
