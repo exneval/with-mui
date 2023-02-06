@@ -30,4 +30,9 @@ module.exports = {
     "no-throw-literal": "error",
     "no-return-await": "error",
   },
+  parserOptions: {
+    babelOptions: {
+      presets: [require.resolve("next/babel")],
+    },
+  },
 };
