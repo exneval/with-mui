@@ -11,16 +11,21 @@
     "build": "turbo run build",
     "start": "turbo run start",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "eslint-config-custom": "workspace:*",
-    "prettier": "^2.8.3",
-    "turbo": "^1.7.3"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.4",
+    "turbo": "^1.8.3"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {},
-  "packageManager": "pnpm@7.26.3"
+  "packageManager": "pnpm@7.29.1"
 }
