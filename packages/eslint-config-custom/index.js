@@ -10,6 +10,10 @@ module.exports = {
   plugins: ["@typescript-eslint", "simple-import-sort"],
   rules: {
     "@next/next/no-html-link-for-pages": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      { devDependencies: ["**/*.d.ts"] },
+    ],
     "prettier/prettier": ["error", { endOfLine: "auto" }],
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
@@ -29,10 +33,5 @@ module.exports = {
     "no-new-func": "error",
     "no-throw-literal": "error",
     "no-return-await": "error",
-  },
-  parserOptions: {
-    babelOptions: {
-      presets: [require.resolve("next/babel")],
-    },
   },
 };

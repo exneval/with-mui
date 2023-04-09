@@ -5,9 +5,15 @@ FROM node:alpine AS builder
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
 RUN apk update
+
+# Set pnpm global bin
+ENV PNPM_HOME="/root/.local/share/pnpm"
+ENV PATH="${PATH}:${PNPM_HOME}"
+
 # Set working directory
 WORKDIR /app
-RUN pnpm add -g turbo
+RUN npm install -g pnpm
+RUN pnpm install -g turbo
 COPY . .
 RUN turbo prune --scope=web --docker
 
@@ -21,7 +27,8 @@ WORKDIR /app
 COPY .gitignore .gitignore
 COPY --from=builder /app/out/json/ .
 COPY --from=builder /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
-RUN pnmp install
+RUN npm install -g pnpm
+RUN pnpm install
 
 # Build the project
 COPY --from=builder /app/out/full/ .

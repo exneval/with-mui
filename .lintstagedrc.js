@@ -1,4 +1,4 @@
 module.exports = {
-  "**/*.{ts,tsx,md}": ["pnpm format"],
-  "apps/**/*.{ts,tsx}": ["pnpm lint"],
+  "*.{ts,tsx,md}": ["pnpm run format"],
+  "*.{ts,tsx}": ["pnpm run lint --"],
 };
