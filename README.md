@@ -54,7 +54,14 @@ To shutdown all running containers:
 
 ```
 # Stop all running containers
-docker kill $(docker ps -q) && docker rm $(docker ps -a -q)
+docker kill $(docker ps -aq) && docker rm $(docker ps -aq)
+```
+
+To clear space:
+
+```
+# Free space
+docker system prune -af --volumes
 ```
 
 ### Remote Caching

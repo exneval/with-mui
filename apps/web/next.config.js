@@ -1,12 +1,17 @@
-const path = require("path");
+// NOTE: Uncomment this when building with docker
+// const path = require("path");
+
+const withDocker = {
+  // output: "standalone",
+  // experimental: {
+  //   outputFileTracingRoot: path.join(__dirname, "../../"),
+  // },
+};
 
 /** @type {import('next').NextConfig} */
 module.exports = {
+  ...withDocker,
   reactStrictMode: true,
-  output: "standalone",
-  experimental: {
-    outputFileTracingRoot: path.join(__dirname, "../../"),
-  },
   modularizeImports: {
     "@mui/icons-material": {
       transform: "@mui/icons-material/{{member}}",

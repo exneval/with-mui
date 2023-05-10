@@ -9,21 +9,21 @@
     "lint": "tsc && next lint --fix ."
   },
   "dependencies": {
-    "@emotion/cache": "^11.10.7",
-    "@emotion/react": "^11.10.6",
-    "@emotion/server": "^11.10.0",
-    "@emotion/styled": "^11.10.6",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.11.16",
-    "next": "^13.3.0",
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.6",
+    "@mui/material": "^5.12.3",
+    "next": "^13.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@total-typescript/ts-reset": "0.4.2",
-    "@types/node": "^18.15.11",
-    "@types/react": "^18.0.33",
-    "@types/react-dom": "^18.0.11",
+    "@types/node": "^18.16.6",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "^5.0.4"
