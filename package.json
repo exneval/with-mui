@@ -21,11 +21,11 @@
     "husky": "^8.0.0",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
-    "turbo": "^1.9.4"
+    "turbo": "^1.9.9"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {},
-  "packageManager": "pnpm@8.5.1"
+  "packageManager": "pnpm@8.6.0"
 }
